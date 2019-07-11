@@ -39,7 +39,7 @@ class GameObject {
     }
     takeDamage = function() {
         return `${this.name} took damage.`;
-      };
+    };
   };
   
   /*
@@ -60,7 +60,7 @@ class GameObject {
     }
     greet = function() {
         return `${this.name} offers a greeting in ${this.language}`
-      };
+    };
   }
    
   /*
@@ -139,31 +139,31 @@ class GameObject {
     // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
     // * Create two new objects, one a villain and one a hero and fight it out with methods!
     class Hero extends Humanoid {
-      constructor(good){
-        super(good);
-        this.shield = good.shield;
-    }
-    attack = function (opp) {
-        if(opp.healthPoints + opp.shield - 10 === 0){
-          return `${opp.name} has been defeated.`;
-        }else{
-          return `${opp.name} has survived your attack.`
-        } 
-      }
+        constructor(good){
+            super(good);
+            this.shield = good.shield;
+        }
+        attack = function (opp) {
+            if(opp.healthPoints + opp.shield - 10 === 0){
+                return `${opp.name} has been defeated.`;
+            }else{
+                return `${opp.name} has survived your attack.`;
+            } 
+        }
     }
   
     class Villain extends Humanoid {
-      constructor(evil) {
-        super(evil);
-        this.shield = evil.shield;
-      }
-      attack = function (opp) {
-        if(opp.healthPoints + opp.shield - 12 === 0){
-          return `${opp.name} has been defeated.`;
-        }else{
-          return `${opp.name} has survived your attack.`
-        } 
-      }
+        constructor(evil) {
+            super(evil);
+            this.shield = evil.shield;
+        }
+        attack = function (opp) {
+            if(opp.healthPoints + opp.shield - 12 === 0){
+                return `${opp.name} has been defeated.`;
+            }else{
+                return `${opp.name} has survived your attack.`;
+            } 
+        }
     }
   
   
